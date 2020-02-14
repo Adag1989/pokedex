@@ -41,7 +41,7 @@ code {
   text-align: center;
   transform-style: preserve-3d;
   transition: transform 1s;
-  backface-visibility: hidden;
+
 }
 
 .logo {
@@ -86,7 +86,7 @@ code {
   "pokeball pokeball"
   ;
   height: 100%;
-  backface-visibility: hidden;
+  
   text-align: center;
   width: 100%;
 }
@@ -106,6 +106,10 @@ code {
   background: blue;
   border: solid gold 10px;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
 }
 
 .back-name{
@@ -170,6 +174,14 @@ code {
  grid-area: pic;
  padding-bottom: 0.9em;
  padding-left: 1em;
+}
+
+.flip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
 }
 
 
