@@ -2,7 +2,6 @@ import React from 'react';
 
 const Backcard = (props) => {
     const details = !props.name[props.number]? '':props.name[props.number]
-    console.log(!details? 'hi':props.number)
     return (
         
         <div className={"card-back"}>  

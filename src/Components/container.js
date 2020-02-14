@@ -20,7 +20,8 @@ class Cardcontainer extends Component {
         .then(cardBack => this.setState({ cardBack: cardBack }))}
 
       handleClick = (e) => {
-          !e.currentTarget.style.transform? e.currentTarget.style.transform = 'rotateY(180deg)' : e.currentTarget.style.transform = ''
+          e.currentTarget.firstChild.style.transform !== 'rotateY(180deg)'? e.currentTarget.firstChild.style.transform = 'rotateY(180deg)' : e.currentTarget.firstChild.style.transform=''
+          
       }
 
       capitalizeName = (name) => {
@@ -35,8 +36,8 @@ class Cardcontainer extends Component {
         return (
             this.state.pokemon.map((poke, index)=>{
                 return (
-                   
-                    <div onClick={this.handleClick} 
+                   <div onClick={this.handleClick} className={'flip-container'}>
+                    <div  
                         className={"card-container"} 
                         key={index}
                         >                  
@@ -44,7 +45,7 @@ class Cardcontainer extends Component {
                         <Backcard capital={this.capitalizeName} number={index} name={this.state.cardBack} />                      
                     </div>
                     
-      
+                    </div>
                 )
             })
         )
