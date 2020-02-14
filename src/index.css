@@ -41,7 +41,7 @@ code {
   text-align: center;
   transform-style: preserve-3d;
   transition: transform 1s;
-
+  -webkit-backface-visibility: hidden;
 }
 
 .logo {
@@ -86,9 +86,10 @@ code {
   "pokeball pokeball"
   ;
   height: 100%;
-  
+  backface-visibility: hidden;
   text-align: center;
   width: 100%;
+  -webkit-backface-visibility: hidden;
 }
 
 .card-back {
